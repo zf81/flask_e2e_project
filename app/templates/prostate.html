@@ -17,15 +17,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for patientdata in data2 %}
+                        {% for prostatedata in data2 %}
                         <tr>
-                            <td class="border px-4 py-2">{{ patientdata.id }}</td>
-                            <td class="border px-4 py-2">{{ patientdata.patient_id }}</td>
-                            <td class="border px-4 py-2">{{ patientdata.psa }}</td>
-                            <td class="border px-4 py-2">{{ patientdata.prostate_volume }}</td>
-                            <td class="border px-4 py-2">{{ patientdata.exodx }}</td>
-                            <td class="border px-4 py-2">{{ patientdata.mri }}</td>
-                            <td class="border px-4 py-2">{{ patientdata.decipher }}</td>
+                            <td class="border px-4 py-2">{{ prostatedata.id }}</td>
+                            <td class="border px-4 py-2">{{ prostatedata.patient_id }}</td>
+                            <td class="border px-4 py-2">{{ prostatedata.psa }}</td>
+                            <td class="border px-4 py-2">{{ prostatedata.prostate_volume }}</td>
+                            <td class="border px-4 py-2">{{ prostatedata.exodx }}</td>
+                            <td class="border px-4 py-2">{{ prostatedata.mri }}</td>
+                            <td class="border px-4 py-2">{{ prostatedata.decipher }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
