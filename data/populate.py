@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
 from faker import Faker
-from db.db import Patient, Preferences, Demographics
+from db.db import Patient, Prostate, Encounter
 import random
 
 # Load environment variables
@@ -27,23 +27,21 @@ fake = Faker()
 
 psa = ['4.89', '72.32', '0.002', '3.67', '4.12', '7.34', '16.09', '2.01', '1.33', '13.996', '5.53']
 
-Exodx = ['15.9', '7.84', '12', '29', '56', '2.34', '78', '8.12', '3.31', '1.99', '32.49', '14.11']
+exodx = ['15.9', '7.84', '12', '29', '56', '2.34', '78', '8.12', '3.31', '1.99', '32.49', '14.11']
 
-MRI = ['PIRADS-3', 'PIRADS-2', 'NEGATIVE', 'PIRADS-4', 'PIRADS-5', 'NEGATIVE', 'PIRADS-2', 'PIRADS-4', 'PIRADS-5', 'PIRADS-3', 'PIRADS-4']
+mri = ['PIRADS-3', 'PIRADS-2', 'NEGATIVE', 'PIRADS-4', 'PIRADS-5', 'NEGATIVE', 'PIRADS-2', 'PIRADS-4', 'PIRADS-5', 'PIRADS-3', 'PIRADS-4']
 
-prostate_volume_cc = ['45', '78', '23', '5', '15', '34', '49', '53', '38', '12', '102']
+prostate_volume = ['45', '78', '23', '5', '15', '34', '49', '53', '38', '12', '102']
 
 decipher = ['0', '1', '0.3', '0.67', '0.22']
 
-
-#family history 
-#GU symptoms
-#digital rectal exam
-###
-
 treatment = ['surgery', 'radiation', 'HIFU', 'active surveillance', 'cryoablation', 'cyber knife']
 
-family_history = ['mint', 'pickle', 'blueberry', 'chocolate', 'pine', 'orange', 'strawberry', 'wasabi', 'lemon', 'bacon', 'coffee', 'mint', 'mint', 'mint', 'fennel']
+family_history = ['brother', 'father', 'paternal grandfather', 'paternal uncle', 'none', 'maternal grandfather', 'maternal uncle', 'none']
+
+luts = ['hesitancy', 'urge incontinence', 'nocturia', 'Nephrolithiasis', 'hematuria', 'urgency', 'weak stream', 'incomplete emptying', 'dysuria']
+
+dre = ['abnormal', 'normal']
 
 # Functions to generate fake data
 def create_fake_patient():
@@ -58,24 +56,24 @@ def create_fake_patient():
         address = fake.address()
     )
 
-def create_fake_preferences():
-    return Preferences(
+def create_fake_prostate():
+    return Prostate(
 
     patient_id = session.query(Patient).order_by(func.rand()).first().id,
-    favorite_food = random.choice(foods),
-    favorite_shows = random.choice(show),
-    hobbies = random.choice(hobby),
-    toothpaste_flavor = random.choice(flavor)
+    psa = random.choice(psa),
+    prostate_volume = random.choice(prostate_volume),
+    exodx = random.choice(exodx),
+    mri = random.choice(mri),
+    decipher = random.choice(decipher)
     )
 
-def create_fake_demographics():
-    return Demographics(
+def create_fake_encounter():
+    return Encounter(
     patient_id = session.query(Patient).order_by(func.rand()).first().id,
-    gender = random.choice(genders),
-    language_spoken = random.choice(sample_languages),
-    marital_status = random.choice(marital),
-    nationality = fake.country(),
-    occupation = fake.job()
+    treatment = random.choice(treatment),
+    family_history = random.choice(family_history),
+    luts = random.choice(luts),
+    dre = random.choice(dre)
     )
 
 # Generate and insert fake data
@@ -85,12 +83,12 @@ for _ in range(20):
     
 
 for _ in range(20):
-    fake_preferences = create_fake_preferences()
-    session.add(fake_preferences)
+    fake_prostate = create_fake_prostate()
+    session.add(fake_prostate)
 
 for _ in range(20):
-    fake_demographics = create_fake_demographics()
-    session.add(fake_demographics)
+    fake_encounter = create_fake_encounter()
+    session.add(fake_encounter)
 
 #commit
 session.commit()
