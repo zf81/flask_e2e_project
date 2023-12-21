@@ -1,0 +1,35 @@
+{% extends "base.html" %} 
+
+        {% block content %}
+            <div class="table">
+                <h2 class="text-xl mb-2 text-blue-500 font-bold">Patient Encounter Table</h2>
+                <table class="table-auto">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2">Encounter ID</th>
+                            <th class="px-4 py-2">Patient ID</th>
+                            <th class="px-4 py-2">Family History</th>
+                            <th class="px-4 py-2">Lower Urinary Tract Symptoms</th>
+                            <th class="px-4 py-2">Digital Rectal Exam</th>
+                            <th class="px-4 py-2">Treatment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for patientencounter in data3 %}
+                        <tr>
+                            <td class="border px-4 py-2">{{ patientencounter.id }}</td>
+                            <td class="border px-4 py-2">{{ patientencounter.patient_id }}</td>
+                            <td class="border px-4 py-2">{{ patientencounter.family_history  }}</td>
+                            <td class="border px-4 py-2">{{ patientencounter.luts }}</td>
+                            <td class="border px-4 py-2">{{ patientencounter.dre }}</td>
+                            <td class="border px-4 py-2">{{ patientencounter.treatment }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <br/>
+
+        {% endblock %}

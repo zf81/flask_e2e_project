@@ -43,6 +43,7 @@ luts = ['hesitancy', 'urge incontinence', 'nocturia', 'Nephrolithiasis', 'hematu
 
 dre = ['abnormal', 'normal']
 
+
 # Functions to generate fake data
 def create_fake_patient():
     first_name = fake.first_name()

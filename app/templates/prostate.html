@@ -1,0 +1,38 @@
+{% extends "base.html" %} 
+
+        {% block content %}
+            <div class="table">
+                <h2 class="text-xl mb-2 text-blue-500 font-bold">Prostate Data Table</h2>
+                <table class="table-auto">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2">Data ID</th>
+                            <th class="px-4 py-2">Patient ID</th>
+                            <th class="px-4 py-2">PSA</th>
+                            <th class="px-4 py-2">Prostate Volume (cc)</th>
+                            <th class="px-4 py-2">ExoDx Score</th>
+                            <th class="px-4 py-2">MRI Prostate</th>
+                            <th class="px-4 py-2">Decipher Score</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for patientdata in data2 %}
+                        <tr>
+                            <td class="border px-4 py-2">{{ patientdata.id }}</td>
+                            <td class="border px-4 py-2">{{ patientdata.patient_id }}</td>
+                            <td class="border px-4 py-2">{{ patientdata.psa }}</td>
+                            <td class="border px-4 py-2">{{ patientdata.prostate_volume }}</td>
+                            <td class="border px-4 py-2">{{ patientdata.exodx }}</td>
+                            <td class="border px-4 py-2">{{ patientdata.mri }}</td>
+                            <td class="border px-4 py-2">{{ patientdata.decipher }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <br/>
+
+        {% endblock %}
