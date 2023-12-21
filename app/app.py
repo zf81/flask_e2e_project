@@ -18,8 +18,8 @@ engine = create_engine(GCPURL,
     connect_args={'ssl': {'ssl-mode':'preferred'}},
 )    
 
-GOOGLE_CLIENT_ID = '231364246686-lr3o8hqiva5in05qn4t0logof3sa3vig.apps.googleusercontent.com'
-GOOGLE_CLIENT_SECRET = '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'
+GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
+GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
 
 #logging.basicConfig(
  #   level=logging.DEBUG,
