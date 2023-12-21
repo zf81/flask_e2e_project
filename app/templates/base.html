@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Urology Healthcare Database</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-200">
+
+    <header class="bg-blue-400 text-white p-4">
+        <h1 class="text-2xl font-bold text-center">Fake Urology Healthcare Database</h1>
+        <nav>
+            <ul class="flex space-x-4 font-bold">
+                <li><a href="/" class="hover:underline">Home</a></li>
+                <li><a href="/patients" class="hover:underline">Patients</a></li>
+                <li><a href="/prostate" class="hover:underline">Prostate</a></li>
+                <li><a href="/encounter" class="hover:underline">Encounter</a></li>
+                <li><a href="/dashboard" class="hover:underline">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="p-4">
+
+        {% block content %}
+        
+        <body>
+            <div>
+                <a href="google/" class="login-btn border-solid">
+
+                    <img id="google" src="/static/5847f9cbcef1014c0b5e48c8.jpg"
+                    width="50" height="50" alt="Google">
+
+                <div class="btn-text">
+                    Login with Google
+                </div>
+                </a> 
+            </div>            
+        </body>
+
+            </br>
+            <p class="text-center"> Welcome to the Urology Database! P.S. It's Fake!</p>
+            </br>
+            <p class="text-center">You can view different data points for prostate cancer.</p>
+            </br>
+            <p class="text-center">Please don't diagnose yourself!</p>
+            
+        {% endblock %}
+
+    </main>
+
+    <footer class="bg-blue-400 text-white p-4 mt-6">
+        <p>© 2023 Fake Urology Healthcare Database. All Rights Reserved...but not really!</p>
+    </footer>
+</body>
+
+</html>
