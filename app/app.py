@@ -12,19 +12,21 @@ load_dotenv()
 
 GCPURL = os.getenv("GCPURL")
 
+GCPURL = "mysql+pymysql://root:Fall2023!@34.173.197.213/fizzah"
+
 engine = create_engine(GCPURL,
     connect_args={'ssl': {'ssl-mode':'preferred'}},
 )    
 
-GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
-GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
+GOOGLE_CLIENT_ID = '231364246686-lr3o8hqiva5in05qn4t0logof3sa3vig.apps.googleusercontent.com'
+GOOGLE_CLIENT_SECRET = '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'
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    filename="logs/app.log",
-    filemode="w",
-    format='%(levelname)s - %(name)s - %(message)s'
-)
+#logging.basicConfig(
+ #   level=logging.DEBUG,
+  #  filename="logs/app.log",
+   # filemode="w",
+    #format='%(levelname)s - %(name)s - %(message)s'
+#)
 
 app = Flask(__name__)   
 
@@ -58,7 +60,7 @@ def google():
         redirect_uri = url_for('google_auth', _external=True)
         print('REDIRECT URL: ', redirect_uri)
         session['nonce'] = generate_token()
-        redirect_uri = 'https://5000-cs-149051346400-default.cs-us-east1-vpcf.cloudshell.dev/google/auth/'
+        redirect_uri = 'https://5000-cs-a5f6eb9e-0301-43c8-9669-72e599d315fe.cs-us-east1-vpcf.cloudshell.dev/google/auth/'
         return oauth.google.authorize_redirect(redirect_uri, nonce=session['nonce'])
     except Exception as e:
         logging.error(f"an error occured! {e}")
@@ -243,4 +245,4 @@ def patientencounter():
         return "try again"       
 
 if __name__ == '__main__':
-    app.run(debug=False, port=8080, host='0.0.0.0')
+    app.run(debug=False, port=5000, host='0.0.0.0')
