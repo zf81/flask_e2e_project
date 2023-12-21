@@ -10,9 +10,9 @@ import logging
 
 load_dotenv()  
 
-AZUREURL = os.getenv("AZURE")
+GCPURL = os.getenv("GCPURL")
 
-engine = create_engine(AZUREURL,
+engine = create_engine(GCPURL,
     connect_args={'ssl': {'ssl-mode':'preferred'}},
 )    
 

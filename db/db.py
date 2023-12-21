@@ -15,7 +15,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-AZUREURL = os.getenv("AZURE")
+GCPURL = 'mysql+pymysql://root:Fall2023!@34.173.197.213/fizzah'
+
+GCPURL = os.getenv("GCPURL")
 
 Base = declarative_base()
 
@@ -60,7 +62,8 @@ class Encounter(Base):
 
 ### Part 2 - initial sqlalchemy-engine to connect to db:
 
-engine = create_engine(AZUREURL,
+
+engine = create_engine(GCPURL,
     connect_args={'ssl': {'ssl-mode':'preferred'}},
 )    
 

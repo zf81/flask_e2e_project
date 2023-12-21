@@ -10,11 +10,13 @@ import random
 load_dotenv()
 
 # Database connection settings from environment variables
-DB_AZURE = os.getenv("DB_AZURE")
+GCPURL = os.getenv("GCPURL")
 
 
 # Create a database engine
-engine = create_engine(DB_AZURE, echo=False)
+GCPURL = "mysql+pymysql://root:Fall2023!@34.173.197.213/fizzah"
+
+engine = create_engine(GCPURL, echo=False)
 
 # Create a session to interact with the database
 Session = sessionmaker(bind=engine)
