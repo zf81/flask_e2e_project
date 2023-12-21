@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from pandas import read_sql
 from sqlalchemy import create_engine, text
 from db_functions import update_or_create_user
+import sentry_sdk
 import logging
 
 load_dotenv()  
@@ -21,12 +22,12 @@ engine = create_engine(GCPURL,
 GOOGLE_CLIENT_ID = '231364246686-lr3o8hqiva5in05qn4t0logof3sa3vig.apps.googleusercontent.com'
 GOOGLE_CLIENT_SECRET = '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'
 
-#logging.basicConfig(
- #   level=logging.DEBUG,
-  #  filename="logs/app.log",
-   # filemode="w",
-    #format='%(levelname)s - %(name)s - %(message)s'
-#)
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename="logs/app.log",
+    filemode="w",
+    format='%(levelname)s - %(name)s - %(message)s'
+)
 
 app = Flask(__name__)   
 
