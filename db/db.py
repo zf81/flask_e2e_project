@@ -15,8 +15,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-GCPURL = 'mysql+pymysql://root:Fall2023!@34.173.197.213/fizzah'
-
 GCPURL = os.getenv("GCPURL")
 
 Base = declarative_base()

@@ -14,7 +14,6 @@ GCPURL = os.getenv("GCPURL")
 
 
 # Create a database engine
-GCPURL = "mysql+pymysql://root:Fall2023!@34.173.197.213/fizzah"
 
 engine = create_engine(GCPURL, echo=False)
 
