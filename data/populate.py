@@ -39,7 +39,7 @@ treatment = ['surgery', 'radiation', 'HIFU', 'active surveillance', 'cryoablatio
 
 family_history = ['brother', 'father', 'paternal grandfather', 'paternal uncle', 'none', 'maternal grandfather', 'maternal uncle', 'none']
 
-luts = ['hesitancy', 'urge incontinence', 'nocturia', 'Nephrolithiasis', 'hematuria', 'urgency', 'weak stream', 'incomplete emptying', 'dysuria']
+luts = ['hesitancy', 'urge incontinence', 'nocturia', 'nephrolithiasis', 'hematuria', 'urgency', 'weak stream', 'incomplete emptying', 'dysuria']
 
 dre = ['abnormal', 'normal']
 

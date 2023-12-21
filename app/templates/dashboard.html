@@ -1,0 +1,22 @@
+{% extends "base.html" %} 
+
+        {% block content %}
+
+<body>
+    <h1 class ="font-bold text-blue-500"> Urology Dashboard</h1>
+    <h3> Welcome {{ user.name }} </h3>
+    <h2> User Details</h2>
+    <div>
+        <p> Name: {{ user.name }} </p>
+        <p> Email: {{ user.email }} </p>
+        <p> Profile Picture: <img src="{{ user.picture }}" alt="Profile Picture" style="width:50px;height:50px;"> </p>
+        </br>
+    </div>
+    <div>
+        <a href="/logout" class="logout-btn" style="text-decoration:none;">
+            <button class="logout-btn-text">
+                Logout
+            </button>
+        </a>
+
+{% endblock %}
