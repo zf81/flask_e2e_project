@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 from pandas import read_sql
 from sqlalchemy import create_engine, text
 from db_functions import update_or_create_user
-import sentry_sdk
 import logging
 
 load_dotenv()  
@@ -19,8 +18,8 @@ engine = create_engine(GCPURL,
     connect_args={'ssl': {'ssl-mode':'preferred'}},
 )    
 
-GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
-GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
+GOOGLE_CLIENT_ID = '231364246686-lr3o8hqiva5in05qn4t0logof3sa3vig.apps.googleusercontent.com'
+GOOGLE_CLIENT_SECRET = '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'
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -61,7 +60,7 @@ def google():
         redirect_uri = url_for('google_auth', _external=True)
         print('REDIRECT URL: ', redirect_uri)
         session['nonce'] = generate_token()
-        redirect_uri = 'https://5000-cs-a5f6eb9e-0301-43c8-9669-72e599d315fe.cs-us-east1-vpcf.cloudshell.dev/google/auth/'
+        redirect_uri = 'https://5000-cs-95785c58-446f-40ea-8544-2b7d3521503b.cs-us-east1-pkhd.cloudshell.dev/google/auth'
         return oauth.google.authorize_redirect(redirect_uri, nonce=session['nonce'])
     except Exception as e:
         logging.error(f"an error occured! {e}")

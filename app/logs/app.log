@@ -1,0 +1,26 @@
+INFO - werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.88.0.3:5000
+INFO - werkzeug - [33mPress CTRL+C to quit[0m
+DEBUG - root - success! You have reached the home page!
+INFO - werkzeug - 127.0.0.1 - - [21/Dec/2023 23:18:27] "GET / HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [21/Dec/2023 23:18:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [21/Dec/2023 23:18:27] "[36mGET /static/imagestatic.jpg HTTP/1.1[0m" 304 -
+DEBUG - root - success! Patient Encounter page has been accessed
+INFO - werkzeug - 127.0.0.1 - - [21/Dec/2023 23:18:30] "GET /encounter HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [21/Dec/2023 23:18:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+DEBUG - root - success! Dashboard page has been accessed
+INFO - werkzeug - 127.0.0.1 - - [21/Dec/2023 23:18:33] "[32mGET /dashboard/ HTTP/1.1[0m" 302 -
+DEBUG - root - success! You have reached the home page!
+INFO - werkzeug - 127.0.0.1 - - [21/Dec/2023 23:18:33] "GET / HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [21/Dec/2023 23:18:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [21/Dec/2023 23:18:33] "[36mGET /static/imagestatic.jpg HTTP/1.1[0m" 304 -
+DEBUG - root - success! You have accessed the Google webpage!
+DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): accounts.google.com:443
+DEBUG - urllib3.connectionpool - https://accounts.google.com:443 "GET /.well-known/openid-configuration HTTP/1.1" 200 464
+INFO - werkzeug - 127.0.0.1 - - [21/Dec/2023 23:18:34] "[32mGET /google/ HTTP/1.1[0m" 302 -
+DEBUG - root - success! You have accessed the Google webpage!
+INFO - werkzeug - 127.0.0.1 - - [21/Dec/2023 23:18:53] "[32mGET /google/ HTTP/1.1[0m" 302 -
+DEBUG - root - success! You have accessed the Google webpage!
+INFO - werkzeug - 127.0.0.1 - - [21/Dec/2023 23:18:53] "[32mGET /google/ HTTP/1.1[0m" 302 -
