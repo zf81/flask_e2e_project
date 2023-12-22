@@ -58,7 +58,7 @@ def google():
         redirect_uri = url_for('google_auth', _external=True)
         print('REDIRECT URL: ', redirect_uri)
         session['nonce'] = generate_token()
-        redirect_uri = 'https://5000-cs-95785c58-446f-40ea-8544-2b7d3521503b.cs-us-east1-pkhd.cloudshell.dev/google/auth'
+        redirect_uri = 'https://5000-cs-95785c58-446f-40ea-8544-2b7d3521503b.cs-us-east1-pkhd.cloudshell.dev/google/auth/'
         return oauth.google.authorize_redirect(redirect_uri, nonce=session['nonce'])
     except Exception as e:
         logging.error(f"an error occured! {e}")
