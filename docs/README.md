@@ -9,7 +9,7 @@ The web service created for this project was a flask app that displays a urology
 - I created folders and files and did all coding in the Google Cloud Shell environment 
 - The database was created and hosted on an Azure Database for MySQL flexible server
 - Used SQLalchemy to create data tables and populate them with fake information 
-- The flask app was created in a [python file](https//g.py)
+- The flask app was created in a [python file](https://github.com/zf81/flask_e2e_project/blob/main/app/app.py)
 - The flask app was styled with tailwind css and I built in Logger to the app
 - Implemented Google Oauth which was used to allow users to log into the app with their Gmail logins
 - The app has an **API service**. Specific queries can be made through the URL and this will display specific information from each table. Sample queries are located in the <code>docs</code> folder 
@@ -21,8 +21,10 @@ The web service created for this project was a flask app that displays a urology
 - I deployed the app through Azure. Here is the link: https://urologyapp.azurewebsites.net
 - The app was able to load the patients data page successfully after deploying through Azure. However, when I tried to load other pages I received an error page. Screenshot of this is located in <code>docs</code> folder. 
 
+Error:
+- Although I was successfully able to log in to the app with my stonybrook.edu Gmail account and load in my profile, when I tried to sign in with another account, the Google page returned "Access Blocked." You can find a screnshot of this error under <code>docs</code>
 
-### Steps to Deploy Flask APp Through Azure:
+### Steps to Deploy Flask App Through Azure:
 - Make sure you are cd into the correct directory that contains your app
 - Within the Google Shell terminal, you will need to install [AZURE CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt) using: ```curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash```. Copy and paste the line in and enter.
 - Then type in ```az```
