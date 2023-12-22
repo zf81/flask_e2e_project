@@ -4,12 +4,97 @@ INFO - werkzeug - [31m[1mWARNING: This is a development server. Do not use it 
  * Running on http://10.88.0.3:5000
 INFO - werkzeug - [33mPress CTRL+C to quit[0m
 DEBUG - root - success! You have reached the home page!
-INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 00:36:50] "GET / HTTP/1.1" 200 -
-INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 00:36:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 00:36:50] "[36mGET /static/imagestatic.jpg HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:41] "GET / HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:42] "[36mGET /static/imagestatic.jpg HTTP/1.1[0m" 304 -
 DEBUG - root - success! You have accessed the Google webpage!
 DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): accounts.google.com:443
 DEBUG - urllib3.connectionpool - https://accounts.google.com:443 "GET /.well-known/openid-configuration HTTP/1.1" 200 464
-INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 00:36:52] "[32mGET /google/ HTTP/1.1[0m" 302 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:44] "[32mGET /google/ HTTP/1.1[0m" 302 -
+DEBUG - root - success! Google authorization page has been accessed
+DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG - urllib3.connectionpool - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG - urllib3.connectionpool - https://www.googleapis.com:443 "GET /oauth2/v3/certs HTTP/1.1" 200 1047
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:44] "[32mGET /google/auth/?state=uYG3ejv6l0Lqr79zIpgWNDarRHJyoM&code=4/0AfJohXlvHsgzUjLrx8AG6HaF9gBOvLHv1ojzeN5Uo490FC4SpGcmJh4D91eECsXWNhjvkA&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile+openid&authuser=0&hd=stonybrook.edu&prompt=none HTTP/1.1[0m" 302 -
+DEBUG - root - success! Dashboard page has been accessed
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:44] "GET /dashboard/ HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+DEBUG - root - successfully logged out.
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:47] "[32mGET /logout HTTP/1.1[0m" 302 -
+DEBUG - root - success! You have reached the home page!
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:47] "GET / HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:47] "[36mGET /static/imagestatic.jpg HTTP/1.1[0m" 304 -
 DEBUG - root - success! You have accessed the Google webpage!
-INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 00:38:31] "[32mGET /google/ HTTP/1.1[0m" 302 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:49] "[32mGET /google/ HTTP/1.1[0m" 302 -
+DEBUG - root - success! Google authorization page has been accessed
+DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG - urllib3.connectionpool - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:50] "[32mGET /google/auth/?state=D61uJ9oWCXNr8pK0V98UW8ISpoFgFD&code=4/0AfJohXl4vFH99OykZzusVv9CxEePk7JCNfH3xZqX8ViXFme81hvvJ1OQpjUhiAeCZJMLcA&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile+openid&authuser=0&hd=stonybrook.edu&prompt=none HTTP/1.1[0m" 302 -
+DEBUG - root - success! Dashboard page has been accessed
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:50] "GET /dashboard/ HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+DEBUG - root - success! You have reached the home page!
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:52] "GET / HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:52] "[36mGET /static/imagestatic.jpg HTTP/1.1[0m" 304 -
+DEBUG - root - success! You have accessed the Google webpage!
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:54] "[32mGET /google/ HTTP/1.1[0m" 302 -
+DEBUG - root - success! Google authorization page has been accessed
+DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG - urllib3.connectionpool - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:54] "[32mGET /google/auth/?state=txtv1KLQLX1UIes2JLv24KRwJQSsvL&code=4/0AfJohXmobuvKw3Z9mAuTddji0YTIX5cA-rfn9_sWJVJrcyaUQxplv8FM-BSe86XaS0mocw&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile+openid&authuser=0&hd=stonybrook.edu&prompt=none HTTP/1.1[0m" 302 -
+DEBUG - root - success! Dashboard page has been accessed
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:54] "GET /dashboard/ HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+DEBUG - root - success! Dashboard page has been accessed
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:58] "GET /dashboard/ HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:26:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+DEBUG - root - successfully logged out.
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:02] "[32mGET /logout HTTP/1.1[0m" 302 -
+DEBUG - root - success! You have reached the home page!
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:02] "GET / HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:02] "[36mGET /static/imagestatic.jpg HTTP/1.1[0m" 304 -
+DEBUG - root - success! You have accessed the Google webpage!
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:04] "[32mGET /google/ HTTP/1.1[0m" 302 -
+DEBUG - root - success! Google authorization page has been accessed
+DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG - urllib3.connectionpool - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:04] "[32mGET /google/auth/?state=7bUoq9zsaiLJP3rxDfaZqp4dCFq02v&code=4/0AfJohXkgG2JzH3oagvjSLRNaC0dfUgUAt9o-Kz3_qifNqUABW2SDWKcSarfaqoL2unTLCA&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile+openid&authuser=0&hd=stonybrook.edu&prompt=none HTTP/1.1[0m" 302 -
+DEBUG - root - success! Dashboard page has been accessed
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:04] "GET /dashboard/ HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+DEBUG - root - successfully logged out.
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:06] "[32mGET /logout HTTP/1.1[0m" 302 -
+DEBUG - root - success! You have reached the home page!
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:07] "GET / HTTP/1.1" 200 -
+DEBUG - root - successfully logged out.
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:07] "[32mGET /logout HTTP/1.1[0m" 302 -
+DEBUG - root - success! You have reached the home page!
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:07] "GET / HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:07] "[36mGET /static/imagestatic.jpg HTTP/1.1[0m" 304 -
+DEBUG - root - success! You have reached the home page!
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:08] "GET / HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:08] "[36mGET /static/imagestatic.jpg HTTP/1.1[0m" 304 -
+DEBUG - root - success! You have reached the home page!
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:10] "GET / HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:10] "[36mGET /static/imagestatic.jpg HTTP/1.1[0m" 304 -
+DEBUG - root - success! You have accessed the Google webpage!
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:12] "[32mGET /google/ HTTP/1.1[0m" 302 -
+DEBUG - root - success! Google authorization page has been accessed
+DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG - urllib3.connectionpool - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:12] "[32mGET /google/auth/?state=x6lODy7sjIwEoZ1YK9ufMzZ6cuxdNd&code=4/0AfJohXlFFH0zIAu4y1d4hJWNPKk07qFeh304itVYQm65hXJF7FpBqUk2aBsI1GG10qzDKw&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile+openid&authuser=0&hd=stonybrook.edu&prompt=none HTTP/1.1[0m" 302 -
+DEBUG - root - success! Dashboard page has been accessed
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:12] "GET /dashboard/ HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+DEBUG - root - success! Google authorization page has been accessed
+ERROR - root - an error occured! 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:23] "GET /google/auth/ HTTP/1.1" 200 -
+DEBUG - root - success! You have accessed the Google webpage!
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:28] "[32mGET /google/ HTTP/1.1[0m" 302 -
