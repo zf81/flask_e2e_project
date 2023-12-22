@@ -98,3 +98,13 @@ ERROR - root - an error occured! 400 Bad Request: The browser (or proxy) sent a 
 INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:23] "GET /google/auth/ HTTP/1.1" 200 -
 DEBUG - root - success! You have accessed the Google webpage!
 INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:27:28] "[32mGET /google/ HTTP/1.1[0m" 302 -
+DEBUG - root - success! You have reached the home page!
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:36:06] "GET / HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:36:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:36:06] "[36mGET /static/imagestatic.jpg HTTP/1.1[0m" 304 -
+DEBUG - root - success! Patient prostate data page has been accessed
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:36:51] "GET /prostate HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:36:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+DEBUG - root - success! Patient prostate data page has been accessed
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:37:10] "GET /prostate HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [22/Dec/2023 02:37:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
